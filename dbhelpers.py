@@ -47,10 +47,3 @@ def run_statement(statement, list_of_args=[]):
     return results
 
 
-def make_api(statement):
-    results = run_statement(statement)
-    if (type(results) == list):
-        animal_json = json.dumps(results, default=str)
-        return animal_json
-    else:
-        return "Sorry there is an error"
